@@ -2,35 +2,37 @@
   "schemaVersion": 1,
   "id": "weeping_angels",
   "version": "${version}",
-
-  "name": "Weeping Angels",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Weeping Angels Mod",
+  "description": "The lonely assassins, they used to call them - no one quite knows where they came from but they're as old as the universe, or very nearly. And they've survived this long because they have the most perfect defence system ever evolved. They're quantum locked. The moment they are seen or observed by any other living creature they freeze into rock - no choice, a fact of their biology. In the sight of any living thing, they literally turn to stone. And you can't kill a stone. Of course, a stone can't kill you either. But then you blink, then you turn your head away - and oh yes it can!",
   "authors": [
-    "Me!"
+    "Suff99"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/weeping-angels-mod",
+    "sources": "https://github.com/WhoCraft/Weeping-Angels/tree/fabric-1.16",
+    "issues": "https://github.com/WhoCraft/Weeping-Angels/issues"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "license": "AGPLv3",
+  "icon": "assets/weeping_angels/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "craig.software.mc.angels.WeepingAngels"
+      "me.suff.mc.angels.WeepingAngels"
+    ],
+    "modmenu": [
+      "me.suff.mc.angels.client.screen.ModMenuIntegration"
+    ],
+    "client": [
+      "me.suff.mc.angels.client.ClientAngels"
     ]
   },
   "mixins": [
     "weeping_angels.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.14.6",
+    "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "~1.19",
-    "java": ">=17"
+    "minecraft": "1.16.x"
   },
   "suggests": {
     "another-mod": "*"
